@@ -154,9 +154,9 @@
                     <p class="text-lg font-semibold text-brand-text/80">KIS International School</p>
                     <ul class="mt-4 list-disc list-inside space-y-2 text-brand-text">
                         <li>Implemented cost-effective solutions, resulting in a 20% reduction in project expenses.</li>
-                        <li>Streamlined project workflows through automations, increasing efficiency by 25%.</li>
+                        <li>Streamlined project workflows through automation, increasing efficiency by 25%.</li>
                         <li>Liaised with various vendors to implement new technologies.</li>
-                        <li>Managed Active Directories for over 1000 users.</li>
+                        <li>Managed Active Directory for over 1000 users.</li>
                     </ul>
                 </div>
                 <div class="mb-12 relative">
@@ -165,9 +165,9 @@
                     <h3 class="text-2xl font-bold text-brand-accent mt-1">IT Support Analyst</h3>
                     <p class="text-lg font-semibold text-brand-text/80">Monash University</p>
                     <ul class="mt-4 list-disc list-inside space-y-2 text-brand-text">
-                        <li>Analyzed and diagnosed technical problems from BYOD devices, ensuring minimal downtime.</li>
-                        <li>Implemented best IT practices, increasing workplace productivity.</li>
-                        <li>Actively monitored and fixed student issues using Slack and automations.</li>
+                        <li>Analyzed and diagnosed technical problems for BYOD devices, ensuring minimal downtime.</li>
+                        <li>Implemented IT best practices, increasing workplace productivity.</li>
+                        <li>Actively monitored and resolved student issues using Slack and automations.</li>
                     </ul>
                 </div>
                 <div class="relative">
@@ -177,7 +177,7 @@
                     <p class="text-lg font-semibold text-brand-text/80">Royal Melbourne Institute of Technology</p>
                     <ul class="mt-4 list-disc list-inside space-y-2 text-brand-text">
                         <li>Collaborated in a team of six to develop a VR-compatible helicopter simulator using Unity.</li>
-                        <li>Implemented Scrum methodology for project tracking and timely development.</li>
+                        <li>Implemented Scrum methodology to track project progress and ensure timely development.</li>
                         <li>Presented the project to Boeing and other major industry leaders.</li>
                     </ul>
                 </div>
@@ -230,7 +230,7 @@
             <h2 class="text-4xl font-bold text-center text-brand-accent mb-12">Skills</h2>
             <div class="max-w-4xl mx-auto space-y-12">
                 <div>
-                    <h3 class="text-2xl font-bold text-center text-brand-primary mb-6">Technical Skills</h3>
+                    <h3 class="text-2xl font-bold text-center text-brand-primary mb-8">Technical Skills</h3>
                     <div class="bg-slate-800/50 p-8 rounded-lg">
                         <div class="flex flex-wrap justify-center gap-4">
                             <span class="skill-badge">SQL</span><span class="skill-badge">Virtual Machines</span><span class="skill-badge">Containerization</span><span class="skill-badge">Network Configuration</span><span class="skill-badge">Microsoft 365</span><span class="skill-badge">Linux</span><span class="skill-badge">MacOS</span><span class="skill-badge">Windows</span><span class="skill-badge">Version Control / Git</span><span class="skill-badge">Bash Scripting</span><span class="skill-badge">Network Security</span><span class="skill-badge">Website Development</span><span class="skill-badge">Nmap</span><span class="skill-badge">Ethical Hacking</span><span class="skill-badge">GCP</span><span class="skill-badge">AWS</span><span class="skill-badge">Python</span>
@@ -424,44 +424,8 @@
         const chatWindow = document.getElementById('chat-window');
         const chatSubmitButton = document.getElementById('chat-submit-button');
         
-        // This is the knowledge base for the AI. It's pulled from the portfolio content.
-        const resumeContext = `
-            PERSONAL_DETAILS:
-            - Name: James Perenchio
-            - Age: 21
-            - Education: Graduated from the Royal Melbourne Institute of Technology (RMIT).
-            - Hobbies: Go-karting, brewing homemade probiotic ginger beer, and playing Dirt Rally on his Steam Deck.
-            - Career Goals: Aspires to be a penetration tester or work in the cybersecurity space.
-            - Languages: English (Fluent), Thai (Conversational).
-
-            SUMMARY: Highly motivated Systems Administrator with a proven track record in optimizing IT infrastructure and enhancing operational efficiency. Possessing strong expertise in network configuration, system administration, and cybersecurity, coupled with a deep understanding of best IT practices. Eager to leverage a background in managing complex systems and implementing innovative technical solutions to contribute to a forward-thinking organization.
-
-            WORK EXPERIENCE:
-            - Systems Administrator, KIS International School (Apr 2025 - Present): Implemented cost-effective solutions (20% project expense reduction), streamlined workflows with automation (25% efficiency increase), liaised with vendors, and managed Active Directories for 1000+ users.
-            - IT Support Analyst, Monash University (Feb 2024 - Feb 2025): Analyzed and diagnosed BYOD technical problems, implemented IT best practices for productivity, and monitored/fixed student issues via Slack and automations.
-            - Unity Game Designer, Royal Melbourne Institute of Technology (Jun 2024 - Nov 2024): As part of a team, developed the VR Helicopter Simulator (HeliSimm).
-
-            PROJECTS:
-            - PassClass (Lecture Summarizer & Aggregator): 
-                - Inspiration: To combat long, boring lectures with irrelevant content by creating a way to get digestible summaries and test knowledge.
-                - What it does: Converts lectures and videos to text. Users can upload a semester's worth of lecture slides to bolster the LLM's outputs. It uses Redactive-AI with RAG to ensure reliable information retrieval from the lecturer's material, not just a generic AI model. This also protects the university's proprietary information.
-                - How it was built: Used AWS S3, AWS Textract, AWS Transcribe, and API Gateway. Content is published to Atlassian's Confluence which acts as a database. Redactive-AI chunks the information and performs a semantic search. The front-end is a simple Flask website.
-                - Challenges: Dealing with a wide range of API calls, specifically with a problematic ChatGPT API key. Learning the new Redactive AI product required direct collaboration with their team. The team was also new to some AWS services and Boto3.
-                - Accomplishments: Creating a working MVP despite the team being new to hackathons and some of the technologies. Gained valuable skills in a short time.
-                - What's next: The team sees it as a tool for educators and for aiding students with special needs (e.g., text-to-speech for the visually-impaired, a tool for those with attention-deficit disorders).
-            - VR Helicopter Simulator (HeliSimm on the Novaball): 
-                - Technology: The project uses the Eight360 NOVA Simulator, also known as the "Novaball," at RMIT's Virtual Experiences Lab (VXLab). This is a unique, untethered, 360-degree VR motion simulator capable of continuous rotation in any direction, providing an unparalleled sense of realism and vestibular feedback.
-                - Application (HeliSimm): HeliSimm is the sophisticated helicopter flight simulation program run on the Novaball. It integrates detailed aerodynamic models and realistic cockpit controls.
-                - Key Features & Purpose: The primary goals are to enhance pilot training in a safe environment (practicing emergency procedures, low-level flight), conduct human factors research (studying pilot performance, stress levels), and serve as a virtual testbed for new helicopter technologies (like advanced control systems or autonomous algorithms).
-            - AMBER Energy Hackathon: 
-                - Context: This project was inspired by Amber Energy Australia, a company that provides customers with direct access to the real-time wholesale price of electricity.
-                - Goal: To develop a Python-based machine learning solution to dynamically optimize electricity trading within this volatile market.
-                - Solution: The project leveraged predictive analytics and algorithmic strategies to forecast demand and price fluctuations, enhancing real-time decision-making for energy trading.
-            
-            CERTIFICATIONS: CompTIA Network+, SFPC Scrum Foundation.
-
-            TECHNICAL SKILLS: SQL, Virtual Machines, Containerization, Network Configuration, Microsoft 365, Linux, MacOS, Windows, Version Control/Git, Bash Scripting, Network Security, Website Development, Nmap, Ethical Hacking, GCP, AWS, Python.
-        `;
+        // This is the knowledge base for the AI.
+        const resumeContext = "PERSONAL_DETAILS: - Name: James Perenchio - Age: 21 - Education: Graduated from the Royal Melbourne Institute of Technology (RMIT). - Hobbies: Go-karting, brewing homemade probiotic ginger beer, and playing Dirt Rally on his Steam Deck. - Career Goals: Aspires to be a penetration tester or work in the cybersecurity space. - Languages: English (Fluent), Thai (Conversational). SUMMARY: Highly motivated Systems Administrator with a proven track record in optimizing IT infrastructure and enhancing operational efficiency. Possessing strong expertise in network configuration, system administration, and cybersecurity, coupled with a deep understanding of best IT practices. Eager to leverage a background in managing complex systems and implementing innovative technical solutions to contribute to a forward-thinking organization. WORK EXPERIENCE: - Systems Administrator, KIS International School (Apr 2025 - Present): Implemented cost-effective solutions (20% project expense reduction), streamlined workflows with automation (25% efficiency increase), liaised with vendors, and managed Active Directory for 1000+ users. - IT Support Analyst, Monash University (Feb 2024 - Feb 2025): Analyzed and diagnosed BYOD technical problems, implemented IT best practices for productivity, and monitored and fixed student issues using Slack and automations. - Unity Game Designer, Royal Melbourne Institute of Technology (Jun 2024 - Nov 2024): As part of a team, developed the VR Helicopter Simulator (HeliSimm). PROJECTS: - PassClass (Lecture Summarizer & Aggregator): - Inspiration: To combat long, boring lectures with irrelevant content by creating a way to get digestible summaries and test knowledge. - What it does: Converts lectures and videos to text. Users can upload a semester's worth of lecture slides to bolster the LLM's outputs. It uses Redactive-AI with RAG to ensure reliable information retrieval from the lecturer's material, not just a generic AI model. This also protects the university's proprietary information. - How it was built: Used AWS S3, AWS Textract, AWS Transcribe, and API Gateway. Content is published to Atlassian's Confluence which acts as a database. Redactive-AI chunks the information and performs a semantic search. The front-end is a simple Flask website. - Challenges: Dealing with a wide range of API calls, specifically with a problematic ChatGPT API key. Learning the new Redactive AI product required direct collaboration with their team. The team was also new to some AWS services and Boto3. - Accomplishments: Creating a working MVP despite the team being new to hackathons and some of the technologies. Gained valuable skills in a short time. - What's next: The team sees it as a tool for educators and for aiding students with special needs (e.g., text-to-speech for the visually-impaired, a tool for those with attention-deficit disorders). - VR Helicopter Simulator (HeliSimm on the Novaball): - Technology: The project uses the Eight360 NOVA Simulator, also known as the 'Novaball,' at RMIT's Virtual Experiences Lab (VXLab). This is a unique, untethered, 360-degree VR motion simulator capable of continuous rotation in any direction, providing an unparalleled sense of realism and vestibular feedback. - Application (HeliSimm): HeliSimm is the sophisticated helicopter flight simulation program run on the Novaball. It integrates detailed aerodynamic models and realistic cockpit controls. - Key Features & Purpose: The primary goals are to enhance pilot training in a safe environment (practicing emergency procedures, low-level flight), conduct human factors research (studying pilot performance, stress levels), and serve as a virtual testbed for new helicopter technologies (like advanced control systems or autonomous algorithms). - AMBER Energy Hackathon: - Context: This project was inspired by Amber Energy Australia, a company that provides customers with direct access to the real-time wholesale price of electricity. - Goal: To develop a Python-based machine learning solution to dynamically optimize electricity trading within this volatile market. - Solution: The project leveraged predictive analytics and algorithmic strategies to forecast demand and price fluctuations, enhancing real-time decision-making for energy trading. CERTIFICATIONS: CompTIA Network+, SFPC Scrum Foundation. TECHNICAL SKILLS: SQL, Virtual Machines, Containerization, Network Configuration, Microsoft 365, Linux, MacOS, Windows, Version Control/Git, Bash Scripting, Network Security, Website Development, Nmap, Ethical Hacking, GCP, AWS, Python.";
 
         aiChatForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -475,7 +439,7 @@
 
             try {
                 // Prepare the prompt for the Gemini API
-                const prompt = `You are a helpful and professional AI assistant for James Perenchio. Your knowledge is strictly limited to the information in the "CONTEXT" section below. Answer the user's question conversationally, as if you already know this information. Do not mention the word "context" or "information provided". Refer to him as "James". For team projects where his specific role isn't detailed, describe the project's success and the technologies used, framing his contribution as an integral part of the collaborative team effort. If the question is completely unrelated to his professional life, politely state that you can only answer questions about James's profile. CONTEXT: ${resumeContext}. QUESTION: ${userMessage}`;
+                const prompt = "You are a helpful and professional AI assistant for James Perenchio. Your knowledge is strictly limited to the information in the 'CONTEXT' section below. Answer the user's question conversationally, as if you already know this information. Do not mention the word 'context' or 'information provided'. Refer to him as 'James'. For team projects where his specific role isn't detailed, describe the project's success and the technologies used, framing his contribution as an integral part of the collaborative team effort. If the question is completely unrelated to his professional life, politely state that you can only answer questions about James's profile. CONTEXT: " + resumeContext + " QUESTION: " + userMessage;
 
                 const chatHistory = [];
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
@@ -528,13 +492,7 @@
             const typingIndicator = document.createElement('div');
             typingIndicator.id = 'typing-indicator';
             typingIndicator.classList.add('flex', 'justify-start');
-            typingIndicator.innerHTML = `
-                <div class="chat-bubble-ai p-3 rounded-lg max-w-md flex items-center gap-2">
-                    <span class="w-2 h-2 bg-brand-primary/60 rounded-full animate-pulse-fast"></span>
-                    <span class="w-2 h-2 bg-brand-primary/60 rounded-full animate-pulse-fast" style="animation-delay: 0.2s;"></span>
-                    <span class="w-2 h-2 bg-brand-primary/60 rounded-full animate-pulse-fast" style="animation-delay: 0.4s;"></span>
-                </div>
-            `;
+            typingIndicator.innerHTML = '<div class="chat-bubble-ai p-3 rounded-lg max-w-md flex items-center gap-2"><span class="w-2 h-2 bg-brand-primary/60 rounded-full animate-pulse-fast"></span><span class="w-2 h-2 bg-brand-primary/60 rounded-full animate-pulse-fast" style="animation-delay: 0.2s;"></span><span class="w-2 h-2 bg-brand-primary/60 rounded-full animate-pulse-fast" style="animation-delay: 0.4s;"></span></div>';
             chatWindow.appendChild(typingIndicator);
             chatWindow.scrollTop = chatWindow.scrollHeight;
         }
