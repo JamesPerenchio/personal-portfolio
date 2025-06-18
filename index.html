@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Perenchio | Systems Administrator</title>
+
+    <!-- SEO and Social Sharing Meta Tags -->
+    <meta name="description" content="Personal portfolio for James Perenchio, a Systems Administrator specializing in IT infrastructure, network configuration, and cybersecurity.">
+    <meta name="keywords" content="James Perenchio, Systems Administrator, IT Support, Network Configuration, Cybersecurity, Unity, Python, RMIT, AWS, AI">
+    <meta property="og:title" content="James Perenchio | Systems Administrator">
+    <meta property="og:description" content="A professional portfolio showcasing the skills and experience of James Perenchio.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0D9488/F8FAFC?text=JP">
+    <meta property="og:url" content="YOUR_WEBSITE_URL_HERE"> <!-- IMPORTANT: Replace with your actual URL when you deploy -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+    <!-- Stylesheets and Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-primary': '#0D9488', // Teal
+                        'brand-secondary': '#1E293B', // Slate Dark
+                        'brand-accent': '#F8FAFC', // Slate Light
+                        'brand-text': '#CBD5E1', // Slate Lighter
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1E293B; }
+        ::-webkit-scrollbar-thumb { background: #0D9488; border-radius: 10px; }
+        /* Animation for elements on scroll */
+        .animate-on-scroll { opacity: 0; transition: opacity 0.5s ease-out, transform 0.5s ease-out; transform: translateY(20px); }
+        .is-visible { opacity: 1; transform: translateY(0); }
+        /* Style for the typed cursor */
+        .typed-cursor { color: #0D9488; }
+        /* Back to top button styling */
+        #back-to-top { transition: opacity 0.3s, transform 0.3s; }
+    </style>
+</head>
+<body class="bg-brand-secondary text-brand-text font-sans antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-brand-secondary/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-brand-accent hover:text-brand-primary transition-colors">James Perenchio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-brand-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-brand-primary transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-brand-primary transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-brand-primary transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-brand-accent focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-center hover:bg-brand-primary/20">About</a>
+            <a href="#experience" class="block py-2 px-6 text-center hover:bg-brand-primary/20">Experience</a>
+            <a href="#projects" class="block py-2 px-6 text-center hover:bg-brand-primary/20">Projects</a>
+            <a href="#skills" class="block py-2 px-6 text-center hover:bg-brand-primary/20">Skills</a>
+            <a href="#contact" class="block py-2 px-6 text-center hover:bg-brand-primary/20">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[80vh] flex items-center">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-brand-accent">James Perenchio</h1>
+                <h2 class="text-3xl md:text-4xl font-semibold text-brand-primary mt-2">
+                    <span id="typed-subtitle"></span>
+                </h2>
+                <p class="mt-6 max-w-3xl text-lg text-brand-text">
+                    Highly motivated Systems Administrator with a proven track record in optimizing IT infrastructure, enhancing operational efficiency, and implementing innovative technical solutions.
+                </p>
+                <div class="mt-8 flex gap-4">
+                    <a href="#contact" class="bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-600 transition-transform transform hover:scale-105">Get In Touch</a>
+                    <a href="#projects" class="border border-brand-primary text-brand-primary font-bold py-3 px-6 rounded-lg hover:bg-brand-primary hover:text-white transition-all">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 animate-on-scroll">
+            <h2 class="text-4xl font-bold text-center text-brand-accent mb-12">About Me</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                 <!-- TIP: Replace this placeholder with a professional headshot of yourself -->
+                 <img src="https://placehold.co/400x400/1E293B/F8FAFC?text=JP" alt="James Perenchio" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover border-4 border-brand-primary shadow-lg">
+                <div class="text-center md:text-left">
+                    <p class="text-lg leading-relaxed">
+                        I'm a Systems Administrator with strong expertise in network configuration, system administration, and cybersecurity. With a deep understanding of IT best practices, I enjoy managing complex systems and finding innovative solutions to technical challenges. My background in project management and automation has allowed me to streamline workflows, reduce costs, and significantly boost efficiency. I'm eager to contribute my skills to a forward-thinking organization that values technological advancement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 animate-on-scroll">
+            <h2 class="text-4xl font-bold text-center text-brand-accent mb-16">Work Experience</h2>
+            <div class="relative max-w-4xl mx-auto border-l-2 border-brand-primary/50 pl-8">
+                <!-- Experience Item 1 -->
+                <div class="mb-12 relative">
+                    <div class="absolute -left-[42px] top-1.5 w-4 h-4 bg-brand-primary rounded-full border-4 border-brand-secondary"></div>
+                    <p class="text-sm font-medium text-brand-primary">Apr 2025 - Present</p>
+                    <h3 class="text-2xl font-bold text-brand-accent mt-1">Systems Administrator</h3>
+                    <p class="text-lg font-semibold text-brand-text/80">KIS International School</p>
+                    <ul class="mt-4 list-disc list-inside space-y-2 text-brand-text">
+                        <li>Implemented cost-effective solutions, resulting in a 20% reduction in project expenses.</li>
+                        <li>Streamlined project workflows through automations, increasing efficiency by 25%.</li>
+                        <li>Liaised with various vendors to implement new technologies.</li>
+                        <li>Managed Active Directories for over 1000 users.</li>
+                    </ul>
+                </div>
+                <!-- Experience Item 2 -->
+                <div class="mb-12 relative">
+                     <div class="absolute -left-[42px] top-1.5 w-4 h-4 bg-brand-primary rounded-full border-4 border-brand-secondary"></div>
+                    <p class="text-sm font-medium text-brand-primary">Feb 2024 - Feb 2025</p>
+                    <h3 class="text-2xl font-bold text-brand-accent mt-1">IT Support Analyst</h3>
+                    <p class="text-lg font-semibold text-brand-text/80">Monash University</p>
+                    <ul class="mt-4 list-disc list-inside space-y-2 text-brand-text">
+                        <li>Analyzed and diagnosed technical problems from BYOD devices, ensuring minimal downtime.</li>
+                        <li>Implemented best IT practices, increasing workplace productivity.</li>
+                        <li>Actively monitored and fixed student issues using Slack and automations.</li>
+                    </ul>
+                </div>
+                <!-- Experience Item 3 -->
+                <div class="relative">
+                     <div class="absolute -left-[42px] top-1.5 w-4 h-4 bg-brand-primary rounded-full border-4 border-brand-secondary"></div>
+                    <p class="text-sm font-medium text-brand-primary">Jun 2024 - Nov 2024</p>
+                    <h3 class="text-2xl font-bold text-brand-accent mt-1">Unity Game Designer</h3>
+                    <p class="text-lg font-semibold text-brand-text/80">Royal Melbourne Institute of Technology</p>
+                    <ul class="mt-4 list-disc list-inside space-y-2 text-brand-text">
+                        <li>Collaborated in a team of six to develop a VR-compatible helicopter simulator using Unity.</li>
+                        <li>Implemented Scrum methodology for project tracking and timely development.</li>
+                        <li>Presented the project to Boeing and other major industry leaders.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 animate-on-scroll">
+            <h2 class="text-4xl font-bold text-center text-brand-accent mb-12">Projects & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Project 1: PassClass -->
+                <div class="bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-2 transition-all flex flex-col">
+                    <h3 class="text-2xl font-bold text-brand-accent">PassClass: Lecture Summarizer</h3>
+                    <p class="text-brand-primary font-semibold mt-1">Python, AWS Bedrock & Redactive</p>
+                    <p class="mt-4 flex-grow">A system where users use their Canvas API key to retrieve coursework, which AWS Bedrock parses to generate summaries, answer queries, and create flashcards. Recognized as the Most Innovative Project.</p>
+                    <div class="mt-6 flex gap-4">
+                         <a href="https://youtu.be/-VDAegLxrdY" target="_blank" rel="noopener noreferrer" class="text-brand-text hover:text-brand-primary transition-colors flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg>
+                            Watch Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2: VR Helicopter -->
+                 <div class="bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-2 transition-all flex flex-col">
+                    <h3 class="text-2xl font-bold text-brand-accent">VR Helicopter Simulator</h3>
+                    <p class="text-brand-primary font-semibold mt-1">Unity Game Development</p>
+                    <p class="mt-4 flex-grow">Developed a VR-compatible helicopter flight simulator in a six-person team using Unity, culminating in a successful presentation to industry leaders like Boeing.</p>
+                    <div class="mt-6 flex gap-4">
+                         <a href="https://youtu.be/Zzs6tkmG1DY" target="_blank" rel="noopener noreferrer" class="text-brand-text hover:text-brand-primary transition-colors flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg>
+                            Watch Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 3: AMBER Energy -->
+                <div class="bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-brand-primary/20 hover:-translate-y-2 transition-all flex flex-col">
+                    <h3 class="text-2xl font-bold text-brand-accent">AMBER Energy Hackathon</h3>
+                    <p class="text-brand-primary font-semibold mt-1">Python Machine Learning Solution</p>
+                    <p class="mt-4 flex-grow">Developed a Python-based ML solution to dynamically optimize electricity trading by predicting demand and price fluctuations. Leveraged predictive analytics for innovative energy management.</p>
+                </div>
+                <!-- Certifications -->
+                <div class="bg-slate-800 p-8 rounded-lg shadow-lg md:col-span-3 hover:shadow-brand-primary/20 hover:-translate-y-2 transition-all">
+                    <h3 class="text-2xl font-bold text-brand-accent">Certifications</h3>
+                     <div class="mt-4 flex flex-wrap gap-4">
+                        <span class="bg-brand-primary/20 text-brand-primary font-semibold py-1 px-3 rounded-full">CompTIA Network+</span>
+                        <span class="bg-brand-primary/20 text-brand-primary font-semibold py-1 px-3 rounded-full">SFPC Scrum Foundation</span>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 animate-on-scroll">
+            <h2 class="text-4xl font-bold text-center text-brand-accent mb-12">Technical Skills</h2>
+            <div class="max-w-4xl mx-auto bg-slate-800/50 p-8 rounded-lg">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">Virtual Machines</span>
+                    <span class="skill-badge">Containerization</span>
+                    <span class="skill-badge">Network Configuration</span>
+                    <span class="skill-badge">Microsoft 365</span>
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">MacOS</span>
+                    <span class="skill-badge">Windows</span>
+                    <span class="skill-badge">Version Control / Git</span>
+                    <span class="skill-badge">Bash Scripting</span>
+                    <span class="skill-badge">Network Security</span>
+                    <span class="skill-badge">Website Development</span>
+                    <span class="skill-badge">Nmap</span>
+                    <span class="skill-badge">Ethical Hacking</span>
+                    <span class="skill-badge">GCP</span>
+                    <span class="skill-badge">AWS</span>
+                    <span class="skill-badge">Python</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 animate-on-scroll">
+            <h2 class="text-4xl font-bold text-center text-brand-accent mb-4">Get In Touch</h2>
+            <p class="text-center text-lg max-w-2xl mx-auto mb-12">I'm always open to discussing new projects, creative ideas, or opportunities. Please fill out the form below, and I'll get back to you as soon as possible.</p>
+            <div class="max-w-2xl mx-auto">
+                <!-- IMPORTANT: Go to formspree.io, create a new form, and replace the URL below with your own form's endpoint. -->
+                <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="space-y-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <label for="name" class="block mb-2 text-sm font-medium text-brand-text">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-brand-accent placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all" placeholder="John Doe" required>
+                        </div>
+                        <div class="flex-1">
+                            <label for="email" class="block mb-2 text-sm font-medium text-brand-text">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-brand-accent placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium text-brand-text">Your Message</label>
+                        <textarea id="message" name="message" rows="6" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-brand-accent placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all" placeholder="Let's talk about..." required></textarea>
+                    </div>
+                    <button type="submit" class="bg-brand-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-600 transition-transform transform hover:scale-105 w-full md:w-auto">Send Message</button>
+                </form>
+                <div id="form-status" class="mt-6 text-center"></div>
+                <div class="text-center mt-12">
+                     <p class="mb-4">You can also find me on:</p>
+                     <div class="flex justify-center items-center gap-6">
+                        <!-- TIP: Replace '#' with your actual LinkedIn profile URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-brand-text hover:text-brand-primary transition-colors" title="LinkedIn">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                     </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-brand-primary text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transform translate-y-4 hover:bg-teal-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Typed.js for animated typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // --- Animate on Scroll ---
+        const scrollElements = document.querySelectorAll('.animate-on-scroll');
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+        };
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) el.classList.add('is-visible');
+            });
+        };
+        window.addEventListener('scroll', handleScrollAnimation);
+        handleScrollAnimation(); // Trigger on initial load
+
+        // --- Skill Badge Styling ---
+        document.querySelectorAll('.skill-badge').forEach(badge => {
+            badge.classList.add('bg-slate-700', 'text-brand-accent', 'font-medium', 'py-2', 'px-4', 'rounded-md', 'shadow-sm', 'hover:bg-brand-primary', 'transition-colors', 'cursor-default');
+        });
+
+        // --- Contact Form Submission Handler ---
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const data = new FormData(form);
+            formStatus.innerHTML = '<p class="text-brand-accent">Sending...</p>';
+            formStatus.classList.remove('text-green-400', 'text-red-400');
+            try {
+                const response = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' }});
+                if (response.ok) {
+                    formStatus.innerHTML = '<p>Thanks for your message! I will get back to you shortly.</p>';
+                    formStatus.classList.add('text-green-400');
+                    form.reset();
+                } else {
+                    const responseData = await response.json();
+                    if (Object.hasOwn(responseData, 'errors')) {
+                        formStatus.innerHTML = `<p>${responseData["errors"].map(error => error["message"]).join(", ")}</p>`;
+                    } else {
+                        formStatus.innerHTML = '<p>Oops! There was a problem submitting your form.</p>';
+                    }
+                    formStatus.classList.add('text-red-400');
+                }
+            } catch (error) {
+                formStatus.innerHTML = '<p>Oops! There was a problem submitting your form.</p>';
+                formStatus.classList.add('text-red-400');
+            }
+        }
+        contactForm.addEventListener("submit", handleSubmit);
+
+        // --- Typed.js Subtitle Animation ---
+        new Typed('#typed-subtitle', {
+            strings: ['Systems Administrator', 'IT Innovator', 'Network Specialist', 'AI & Cloud Enthusiast'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+        
+        // --- Back to Top Button ---
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
