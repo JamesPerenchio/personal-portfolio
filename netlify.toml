@@ -1,3 +1,2 @@
-# This file tells Netlify where to find your serverless function.
 [build]
   functions = "netlify/functions/"
