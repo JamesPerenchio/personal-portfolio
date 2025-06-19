@@ -11,7 +11,7 @@
     <meta property="og:title" content="James Perenchio | Systems Administrator">
     <meta property="og:description" content="A professional portfolio showcasing the skills and experience of James Perenchio, now featuring an AI assistant.">
     <meta property="og:image" content="https://placehold.co/1200x630/0D9488/F8FAFC?text=JP">
-    <meta property="og:url" content="YOUR_LIVE_WEBSITE_URL_HERE"> <!-- IMPORTANT: Replace with your actual URL from GitHub Pages after deployment -->
+    <meta property="og:url" content="https://jamesperenchio.netlify.app/"> 
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Favicon -->
@@ -425,7 +425,43 @@
         const chatSubmitButton = document.getElementById('chat-submit-button');
         
         // This is the knowledge base for the AI.
-        const resumeContext = "PERSONAL_DETAILS: - Name: James Perenchio - Age: 21 - Education: Graduated from the Royal Melbourne Institute of Technology (RMIT). - Hobbies: Go-karting, brewing homemade probiotic ginger beer, and playing Dirt Rally on his Steam Deck. - Career Goals: Aspires to be a penetration tester or work in the cybersecurity space. - Languages: English (Fluent), Thai (Conversational). SUMMARY: Highly motivated Systems Administrator with a proven track record in optimizing IT infrastructure and enhancing operational efficiency. Possessing strong expertise in network configuration, system administration, and cybersecurity, coupled with a deep understanding of best IT practices. Eager to leverage a background in managing complex systems and implementing innovative technical solutions to contribute to a forward-thinking organization. WORK EXPERIENCE: - Systems Administrator, KIS International School (Apr 2025 - Present): Implemented cost-effective solutions (20% project expense reduction), streamlined workflows with automation (25% efficiency increase), liaised with vendors, and managed Active Directory for 1000+ users. - IT Support Analyst, Monash University (Feb 2024 - Feb 2025): Analyzed and diagnosed BYOD technical problems, implemented IT best practices for productivity, and monitored and fixed student issues using Slack and automations. - Unity Game Designer, Royal Melbourne Institute of Technology (Jun 2024 - Nov 2024): As part of a team, developed the VR Helicopter Simulator (HeliSimm). PROJECTS: - PassClass (Lecture Summarizer & Aggregator): - Inspiration: To combat long, boring lectures with irrelevant content by creating a way to get digestible summaries and test knowledge. - What it does: Converts lectures and videos to text. Users can upload a semester's worth of lecture slides to bolster the LLM's outputs. It uses Redactive-AI with RAG to ensure reliable information retrieval from the lecturer's material, not just a generic AI model. This also protects the university's proprietary information. - How it was built: Used AWS S3, AWS Textract, AWS Transcribe, and API Gateway. Content is published to Atlassian's Confluence which acts as a database. Redactive-AI chunks the information and performs a semantic search. The front-end is a simple Flask website. - Challenges: Dealing with a wide range of API calls, specifically with a problematic ChatGPT API key. Learning the new Redactive AI product required direct collaboration with their team. The team was also new to some AWS services and Boto3. - Accomplishments: Creating a working MVP despite the team being new to hackathons and some of the technologies. Gained valuable skills in a short time. - What's next: The team sees it as a tool for educators and for aiding students with special needs (e.g., text-to-speech for the visually-impaired, a tool for those with attention-deficit disorders). - VR Helicopter Simulator (HeliSimm on the Novaball): - Technology: The project uses the Eight360 NOVA Simulator, also known as the 'Novaball,' at RMIT's Virtual Experiences Lab (VXLab). This is a unique, untethered, 360-degree VR motion simulator capable of continuous rotation in any direction, providing an unparalleled sense of realism and vestibular feedback. - Application (HeliSimm): HeliSimm is the sophisticated helicopter flight simulation program run on the Novaball. It integrates detailed aerodynamic models and realistic cockpit controls. - Key Features & Purpose: The primary goals are to enhance pilot training in a safe environment (practicing emergency procedures, low-level flight), conduct human factors research (studying pilot performance, stress levels), and serve as a virtual testbed for new helicopter technologies (like advanced control systems or autonomous algorithms). - AMBER Energy Hackathon: - Context: This project was inspired by Amber Energy Australia, a company that provides customers with direct access to the real-time wholesale price of electricity. - Goal: To develop a Python-based machine learning solution to dynamically optimize electricity trading within this volatile market. - Solution: The project leveraged predictive analytics and algorithmic strategies to forecast demand and price fluctuations, enhancing real-time decision-making for energy trading. CERTIFICATIONS: CompTIA Network+, SFPC Scrum Foundation. TECHNICAL SKILLS: SQL, Virtual Machines, Containerization, Network Configuration, Microsoft 365, Linux, MacOS, Windows, Version Control/Git, Bash Scripting, Network Security, Website Development, Nmap, Ethical Hacking, GCP, AWS, Python.";
+        const resumeContext = `
+            PERSONAL_DETAILS:
+            - Name: James Perenchio
+            - Age: 21
+            - Education: Graduated from the Royal Melbourne Institute of Technology (RMIT).
+            - Hobbies: Go-karting, brewing homemade probiotic ginger beer, and playing Dirt Rally on his Steam Deck.
+            - Career Goals: Aspires to be a penetration tester or work in the cybersecurity space.
+            - Languages: English (Fluent), Thai (Conversational).
+
+            SUMMARY: Highly motivated Systems Administrator with a proven track record in optimizing IT infrastructure and enhancing operational efficiency. Possessing strong expertise in network configuration, system administration, and cybersecurity, coupled with a deep understanding of best IT practices. Eager to leverage a background in managing complex systems and implementing innovative technical solutions to contribute to a forward-thinking organization.
+
+            WORK EXPERIENCE:
+            - Systems Administrator, KIS International School (Apr 2025 - Present): Implemented cost-effective solutions (20% project expense reduction), streamlined workflows with automation (25% efficiency increase), liaised with vendors, and managed Active Directory for 1000+ users.
+            - IT Support Analyst, Monash University (Feb 2024 - Feb 2025): Analyzed and diagnosed BYOD technical problems, implemented IT best practices for productivity, and monitored and fixed student issues using Slack and automations.
+            - Unity Game Designer, Royal Melbourne Institute of Technology (Jun 2024 - Nov 2024): As part of a team, developed the VR Helicopter Simulator (HeliSimm).
+
+            PROJECTS:
+            - PassClass (Lecture Summarizer & Aggregator): 
+                - Inspiration: To combat long, boring lectures with irrelevant content by creating a way to get digestible summaries and test knowledge.
+                - What it does: Converts lectures and videos to text. Users can upload a semester's worth of lecture slides to bolster the LLM's outputs. It uses Redactive-AI with RAG to ensure reliable information retrieval from the lecturer's material, not just a generic AI model. This also protects the university's proprietary information.
+                - How it was built: Used AWS S3, AWS Textract, AWS Transcribe, and API Gateway. Content is published to Atlassian's Confluence which acts as a database. Redactive-AI chunks the information and performs a semantic search. The front-end is a simple Flask website.
+                - Challenges: Dealing with a wide range of API calls, specifically with a problematic ChatGPT API key. Learning the new Redactive AI product required direct collaboration with their team. The team was also new to some AWS services and Boto3.
+                - Accomplishments: Creating a working MVP despite the team being new to hackathons and some of the technologies. Gained valuable skills in a short time.
+                - What's next: The team sees it as a tool for educators and for aiding students with special needs (e.g., text-to-speech for the visually-impaired, a tool for those with attention-deficit disorders).
+            - VR Helicopter Simulator (HeliSimm on the Novaball): 
+                - Technology: The project uses the Eight360 NOVA Simulator, also known as the 'Novaball,' at RMIT's Virtual Experiences Lab (VXLab). This is a unique, untethered, 360-degree VR motion simulator capable of continuous rotation in any direction, providing an unparalleled sense of realism and vestibular feedback.
+                - Application (HeliSimm): HeliSimm is the sophisticated helicopter flight simulation program run on the Novaball. It integrates detailed aerodynamic models and realistic cockpit controls.
+                - Key Features & Purpose: The primary goals are to enhance pilot training in a safe environment (practicing emergency procedures, low-level flight), conduct human factors research (studying pilot performance, stress levels), and serve as a virtual testbed for new helicopter technologies (like advanced control systems or autonomous algorithms).
+            - AMBER Energy Hackathon: 
+                - Context: This project was inspired by Amber Energy Australia, a company that provides customers with direct access to the real-time wholesale price of electricity.
+                - Goal: To develop a Python-based machine learning solution to dynamically optimize electricity trading within this volatile market.
+                - Solution: The project leveraged predictive analytics and algorithmic strategies to forecast demand and price fluctuations, enhancing real-time decision-making for energy trading.
+            
+            CERTIFICATIONS: CompTIA Network+, SFPC Scrum Foundation.
+
+            TECHNICAL SKILLS: SQL, Virtual Machines, Containerization, Network Configuration, Microsoft 365, Linux, MacOS, Windows, Version Control/Git, Bash Scripting, Network Security, Website Development, Nmap, Ethical Hacking, GCP, AWS, Python.
+        `;
 
         aiChatForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -438,23 +474,19 @@
             showTypingIndicator();
 
             try {
-                // Prepare the prompt for the Gemini API
-                const prompt = "You are a helpful and professional AI assistant for James Perenchio. Your knowledge is strictly limited to the information in the 'CONTEXT' section below. Answer the user's question conversationally, as if you already know this information. Do not mention the word 'context' or 'information provided'. Refer to him as 'James'. For team projects where his specific role isn't detailed, describe the project's success and the technologies used, framing his contribution as an integral part of the collaborative team effort. If the question is completely unrelated to his professional life, politely state that you can only answer questions about James's profile. CONTEXT: " + resumeContext + " QUESTION: " + userMessage;
+                // The URL for our Netlify serverless function
+                const apiUrl = '/.netlify/functions/gemini';
 
-                const chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-                const payload = { contents: chatHistory };
-                const apiKey = ""; // API key is handled by the environment
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-                
                 const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+                    // Send the user's message and the context to our function
+                    body: JSON.stringify({ userMessage, resumeContext }),
                 });
 
                 if (!response.ok) {
-                    throw new Error(`API error: ${response.statusText}`);
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'API error');
                 }
 
                 const result = await response.json();
@@ -468,7 +500,7 @@
                 appendMessage(aiMessage, 'ai');
 
             } catch (error) {
-                console.error("Gemini API Error:", error);
+                console.error("API Error:", error);
                 removeTypingIndicator();
                 appendMessage("I'm sorry, but I'm having trouble connecting to my services right now. Please try again later.", 'ai');
             }
